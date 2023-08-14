@@ -15,8 +15,9 @@
 \usepackage{graphbox} % use graphics
 
 % adds background watermark
-\usepackage[angle=0, vpos=0.5\paperheight]{draftwatermark}
+\usepackage{draftwatermark}
 \SetWatermarkText{\includegraphics{assets/watermark.eps}}
+\SetWatermarkAngle{0}
 
 % set global justification for text
 \usepackage{ragged2e}
@@ -83,7 +84,12 @@
 
 % set list style
 \usepackage{tasks}
-\settasks{label = •, label-offset = 0em, item-indent = .9em}
+\settasks{
+	label = •,
+	label-offset = 0em,
+	item-indent = .9em,
+	after-item-skip = -\parskip
+}
 
 \textColor
 \begin{document}
