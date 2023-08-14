@@ -2,11 +2,11 @@
 
 % set document borders
 \usepackage[
-	a4paper,
-	top=40mm,
-	left=18mm,
-	right=18mm,
-	bottom=20mm
+  a4paper,
+  top=40mm,
+  left=18mm,
+  right=18mm,
+  bottom=20mm
 ]{geometry}
 
 \usepackage[none]{hyphenat} % disable hyphenating
@@ -30,18 +30,18 @@
 % set fonts
 \usepackage{fontspec}
 \setmainfont{Manrope}[
-	Path = assets/fonts/,
-	Extension = .ttf,
-	UprightFont = *-Regular,
-	ItalicFont = *-Italic,
-	BoldFont = *-Bold,
-	BoldItalicFont = *-BoldItalic
+  Path = assets/fonts/,
+  Extension = .ttf,
+  UprightFont = *-Regular,
+  ItalicFont = *-Italic,
+  BoldFont = *-Bold,
+  BoldItalicFont = *-BoldItalic
 ]
 \newfontfamily{\optifont}{OPTIEinstein}[
-	Path = assets/fonts/,
-	Extension = .otf,
-	UprightFont = *-Black,
-	BoldFont = *-Black
+  Path = assets/fonts/,
+  Extension = .otf,
+  UprightFont = *-Black,
+  BoldFont = *-Black
 ]
 
 % set colors
@@ -53,29 +53,29 @@
 
 % set pdf metadata
 \hypersetup{
-	pdftitle={Mohsen M. — Frontend Engineer Resume},
-	pdfauthor={Mohsen Mohamed}
+  pdftitle={Mohsen M. — Frontend Engineer Resume},
+  pdfauthor={Mohsen Mohamed}
 }
 
 % set head and foot content
 \usepackage{scrlayer-scrpage}
 \ofoot{
-	\small{\normalfont \href{https://github.com/Bumbleboss/latex-resume}{Last update: \textbf{\today}}}
+  \small{\normalfont \href{https://github.com/Bumbleboss/latex-resume}{Last update: \textbf{\today}}}
 }
 
 \ihead{
-	\blackColor
-	{
-		\fontsize{27pt}{27pt}\optifont Mohsen Mohamed\\
-	}
-	\small{
-		\normalfont
-		\href{\domain}{\includegraphics[align=c]{assets/icons/url.eps} bumbleboss.xyz}
-		\quad\quad
-		\href{tel:+201009581682}{\includegraphics[align=c]{assets/icons/phone.eps} +20 100 958 1682}
-		\quad\quad
-		\href{mailto:me@bumbleboss.xyz}{\includegraphics[align=c]{assets/icons/email.eps} me@bumbleboss.xyz}
-	}
+  \blackColor
+  {
+    \fontsize{27pt}{27pt}\optifont Mohsen Mohamed\\
+  }
+  \small{
+    \normalfont
+    \href{\domain}{\includegraphics[align=c]{assets/icons/url.eps} bumbleboss.xyz}
+    \quad\quad
+    \href{tel:+201009581682}{\includegraphics[align=c]{assets/icons/phone.eps} +20 100 958 1682}
+    \quad\quad
+    \href{mailto:me@bumbleboss.xyz}{\includegraphics[align=c]{assets/icons/email.eps} me@bumbleboss.xyz}
+  }
 }
 \ohead{}
 
@@ -88,30 +88,30 @@
 % set list style
 \usepackage{tasks}
 \settasks{
-	label = •,
-	label-offset = 0em,
-	item-indent = .9em,
-	after-item-skip = -\parskip
+  label = •,
+  label-offset = 0em,
+  item-indent = .9em,
+  after-item-skip = -\parskip
 }
 
 \textColor
 \begin{document}
 %
-	\begin{minipage}[t]{0.60\textwidth}
-		\input{content/experience.tex}
-	\end{minipage}
+  \begin{minipage}[t]{0.60\textwidth}
+    \input{content/experience.tex}
+  \end{minipage}
 %
-	\hfill
+  \hfill
 %
-	\begin{minipage}[t]{0.35\textwidth}
-		\section*{About}
-		I am Mohsen, but you can call me Bumbleboss; that's my online nickname.
-		Product Designer, Frontend Engineer, and academically a Mechatronics Engineer.
-		Occasionally a gamer and binge-watcher though.
-		\vspace{4.8mm}
+  \begin{minipage}[t]{0.35\textwidth}
+    \section*{About}
+    I am Mohsen, but you can call me Bumbleboss; that's my online nickname.
+    Product Designer, Frontend Engineer, and academically a Mechatronics Engineer.
+    Occasionally a gamer and binge-watcher though.
+    \vspace{4.8mm}
 
     \input{content/skillset.tex}
     \input{content/education.tex}
-	\end{minipage}
+  \end{minipage}
 %
 \end{document}
