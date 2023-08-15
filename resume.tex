@@ -9,7 +9,6 @@
   bottom=20mm
 ]{geometry}
 
-\usepackage[none]{hyphenat} % disable hyphenating
 \usepackage{hyperref} % use urls
 \usepackage{xcolor} % use colors
 \usepackage{graphbox} % use graphics
@@ -19,9 +18,7 @@
 \SetWatermarkText{\includegraphics{assets/watermark.eps}}
 \SetWatermarkAngle{0}
 
-% set global justification for text
 \usepackage{ragged2e}
-\RaggedRight
 
 % set text lineheight
 \usepackage{setspace}
@@ -91,31 +88,31 @@
 % set list style
 \usepackage{tasks}
 \settasks{
-  label = •,
+  label = \symbol{8226},
   label-offset = 0em,
-  item-indent = .9em,
-  after-item-skip = -\parskip
+  item-indent = 1.5em
 }
 
 \textColor
 \begin{document}
-%
-  \begin{minipage}[t]{0.60\textwidth}
-    \input{content/projects.tex}
-    \input{content/experience.tex}
-  \end{minipage}
-%
-  \hfill
-%
-  \begin{minipage}[t]{0.35\textwidth}
-    \section*{About}
-    I am Mohsen, but you can call me Bumbleboss; that's my online nickname.
-    Product Designer, Frontend Engineer, and academically a Mechatronics Engineer.
-    Occasionally a gamer and binge-watcher though.
-    \vspace{4.8mm}
-
-    \input{content/skillset.tex}
-    \input{content/education.tex}
-  \end{minipage}
-%
+  \setcolumnwidth{0.65\textwidth,0.35\textwidth}
+  \setlength{\columnsep}{3em}
+  
+  \begin{paracol}{2}
+    \begin{leftcolumn}
+      \input{content/projects.tex}
+      \input{content/experience.tex}
+    \end{leftcolumn}
+    
+    \begin{rightcolumn}
+      \sloppy\RaggedRight
+      \section*{About}
+      I am Mohsen, but you can call me \mbox{Bumbleboss}; that's my online nickname.
+      Product Designer, Frontend Engineer, and academically a Mechatronics Engineer.
+      Occasionally a gamer and binge-watcher though.
+      %
+      \input{content/skillset.tex}
+      \input{content/education.tex}
+    \end{rightcolumn}
+  \end{parcol}
 \end{document}
