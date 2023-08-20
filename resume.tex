@@ -53,13 +53,15 @@
 \newcommand{\grayColor}{\color[HTML]{7A7C7F}}
 \newcommand{\textColor}{\color[HTML]{3A3636}}
 
+\newcommand{\route}{frontend}
+
 % set pdf metadata
 \hypersetup{
   pdftitle={Mohsen M. — Frontend Engineer Resume},
   pdfauthor={Mohsen Mohamed}
 }
 
-% set head and foot content
+% set foot content
 \usepackage{scrlayer-scrpage}
 \ofoot{
   \small{\normalfont \href{https://github.com/Bumbleboss/latex-resume}{Last update: \textbf{\today}}}
@@ -70,7 +72,7 @@
 \titleformat*{\section}{\fontsize{20pt}{20pt}\optifont\accentColor}
 \titleformat*{\subsection}{\fontsize{12pt}{12pt}\bfseries\blackColor}
 \titleformat*{\subsubsection}{\fontsize{8pt}{8pt}\bfseries\grayColor}
-
+\textColor
 
 % set list style
 \usepackage{tasks}
@@ -83,23 +85,32 @@
 
 % disable page numbering and set default text color
 \pagenumbering{gobble}
-\textColor
 \begin{document}
-  \input{content/components/heading.tex}
+  \input{content/heading.tex}
 
   \setcolumnwidth{0.65\textwidth,0.35\textwidth}
   \setlength{\columnsep}{3em}
   
   \begin{paracol}{2}
     \begin{leftcolumn}
-      \input{content/projects.tex}
-      \input{content/experience.tex}
+      % frontend
+      \input{content/frontend/projects.tex}
+
+      % % mechatronics
+      % \input{content/mechatronics/projects.tex}
+      % \input{content/mechatronics/courses.tex}
     \end{leftcolumn}
     
     \begin{rightcolumn}
       \sloppy\RaggedRight
       \input{content/about.tex}
-      \input{content/skillset.tex}
+
+      % frontend
+      \input{content/frontend/skillset.tex}
+      
+      % % mechatronics
+      % \input{content/mechatronics/skillset.tex}
+
       \input{content/education.tex}
     \end{rightcolumn}
   \end{paracol}
