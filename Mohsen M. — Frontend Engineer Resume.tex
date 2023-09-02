@@ -1,6 +1,6 @@
 \documentclass[9pt]{extarticle}
 
-\input{content/preamble.tex}
+\input{content/preamble}
 
 % set pdf metadata
 \hypersetup{
@@ -9,21 +9,21 @@
 }
 
 \begin{document}
-  \input{content/heading.tex}
+  \input{content/heading}
 
   \setcolumnwidth{0.65\textwidth,0.35\textwidth}
   \setlength{\columnsep}{3em}
   
   \begin{paracol}{2}
     \begin{leftcolumn}
-      \input{content/frontend/projects.tex}
+      \input{content/frontend/projects}
     \end{leftcolumn}
     
     \begin{rightcolumn}
       \sloppy\RaggedRight
-      \input{content/about.tex}
-      \input{content/frontend/skillset.tex}
-      \input{content/education.tex}
+      \input{content/frontend/skillset}
+      \input{content/about}
+      \input{content/education}
     \end{rightcolumn}
   \end{paracol}
 \end{document}
