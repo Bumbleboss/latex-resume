@@ -1,5 +1,3 @@
-\documentclass[9pt]{extarticle}
-
 % set document borders
 \usepackage[
   a4paper,
@@ -53,14 +51,6 @@
 \newcommand{\grayColor}{\color[HTML]{7A7C7F}}
 \newcommand{\textColor}{\color[HTML]{3A3636}}
 
-\newcommand{\route}{frontend}
-
-% set pdf metadata
-\hypersetup{
-  pdftitle={Mohsen M. — Frontend Engineer Resume},
-  pdfauthor={Mohsen Mohamed}
-}
-
 % set foot content
 \usepackage{scrlayer-scrpage}
 \ofoot{
@@ -85,40 +75,3 @@
 
 % disable page numbering and set default text color
 \pagenumbering{gobble}
-\begin{document}
-  \input{content/heading.tex}
-
-  \setcolumnwidth{0.65\textwidth,0.35\textwidth}
-  \setlength{\columnsep}{3em}
-  
-  \begin{paracol}{2}
-    \begin{leftcolumn}
-      % product
-      \input{content/product/experience.tex}
-      \input{content/product/work.tex}
-
-      % frontend
-      % \input{content/frontend/projects.tex}
-
-      % mechatronics
-      % \input{content/mechatronics/projects.tex}
-      % \input{content/mechatronics/courses.tex}
-    \end{leftcolumn}
-    
-    \begin{rightcolumn}
-      \sloppy\RaggedRight
-      \input{content/about.tex}
-
-      % product
-      \input{content/product/skillset.tex}
-
-      % frontend
-      % \input{content/frontend/skillset.tex}
-      
-      % mechatronics
-      % \input{content/mechatronics/skillset.tex}
-
-      \input{content/education.tex}
-    \end{rightcolumn}
-  \end{paracol}
-\end{document}

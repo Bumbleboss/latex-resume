@@ -1,0 +1,29 @@
+\documentclass[9pt]{extarticle}
+
+\input{content/preamble.tex}
+
+% set pdf metadata
+\hypersetup{
+  pdftitle={Mohsen M. — Frontend Engineer Resume},
+  pdfauthor={Mohsen Mohamed}
+}
+
+\begin{document}
+  \input{content/heading.tex}
+
+  \setcolumnwidth{0.65\textwidth,0.35\textwidth}
+  \setlength{\columnsep}{3em}
+  
+  \begin{paracol}{2}
+    \begin{leftcolumn}
+      \input{content/frontend/projects.tex}
+    \end{leftcolumn}
+    
+    \begin{rightcolumn}
+      \sloppy\RaggedRight
+      \input{content/about.tex}
+      \input{content/frontend/skillset.tex}
+      \input{content/education.tex}
+    \end{rightcolumn}
+  \end{paracol}
+\end{document}
