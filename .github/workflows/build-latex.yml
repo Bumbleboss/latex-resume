@@ -1,4 +1,4 @@
-name: Publish Resume
+name: Test documents
 on: [push]
   branches:
     - '*'

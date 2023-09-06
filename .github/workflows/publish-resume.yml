@@ -1,4 +1,4 @@
-name: Publish Resume
+name: Publish resume
 on: [push]
   branches:
     - 'master'
