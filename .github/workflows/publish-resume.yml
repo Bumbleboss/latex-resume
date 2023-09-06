@@ -16,7 +16,7 @@ jobs:
             product_designer_resume.tex
           latexmk_use_lualatex: true
           latexmk_shell_escape: true
-          args: '-outdir=out -pdf -file-line-error -halt-on-error -interaction=nonstopmode -c'
+          args: '-outdir=out -pdf -c'
           extra_fonts: |
             ./assets/fonts/*.tff
             ./assets/fonts/*.otf
