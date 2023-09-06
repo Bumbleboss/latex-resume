@@ -1,0 +1,26 @@
+name: Publish Resume
+on: [push]
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v3
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: |
+            Mohsen M. — Front-end Engineer Resume.tex
+            Mohsen M. — Mechatronics Engineer Resume.tex
+            Mohsen M. — Product Designer Resume.tex
+          latexmk_use_lualatex: true
+          texlive_version: 2022
+          latexmk_shell_escape: true
+          extra_fonts: |
+            ./assets/fonts/*.tff
+            ./assets/fonts/*.otf
+      - name: Upload PDF file
+        uses: actions/upload-artifact@v3
+        with:
+          name: PDF
+          path: main.pdf
