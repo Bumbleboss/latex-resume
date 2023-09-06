@@ -19,7 +19,7 @@ jobs:
             ./assets/fonts/*.tff
             ./assets/fonts/*.otf
       - name: Publish PDFs to Portfolio
-        uses: nkoppel/push-files-to-another-repository@1.1.0
+        uses: nkoppel/push-files-to-another-repository@v1.1.1
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
