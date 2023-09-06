@@ -10,16 +10,23 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: |
-            "front-end-resume.tex"
-            "mechatronics-resume.tex"
-            "product-design-resume.tex"
+            front-end-resume.tex
+            mechatronics-resume.tex
+            product-design-resume.tex
           latexmk_use_lualatex: true
           latexmk_shell_escape: true
           extra_fonts: |
             ./assets/fonts/*.tff
             ./assets/fonts/*.otf
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v3
+      - name: Publish PDFs to Portfolio
+        uses: nkoppel/push-files-to-another-repository@1.1.0
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          name: PDF
-          path: ./*.pdf
+          source-files: ./*.pdf
+          destination-username: Bumbleboss
+          destination-repository: bumbleboss.xyz
+          destination-branch: pdf-copy
+          destination-directory: public/files/
+          commit-email: me@bumbleboss.xyz
+          commit-message: 'chore: updated new resumes'
