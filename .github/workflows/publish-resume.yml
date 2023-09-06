@@ -10,9 +10,9 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: |
-            "Mohsen M. — Front-end Engineer Resume.tex"
-            "Mohsen M. — Mechatronics Engineer Resume.tex"
-            "Mohsen M. — Product Designer Resume.tex"
+            "front-end-resume.tex"
+            "mechatronics-resume.tex"
+            "product-design-resume.tex"
           latexmk_use_lualatex: true
           latexmk_shell_escape: true
           extra_fonts: |
