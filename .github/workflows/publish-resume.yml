@@ -1,7 +1,9 @@
 name: Publish Resume
 on: [push]
+  branches:
+    - 'master'
 jobs:
-  build_latex:
+  publish_latex_resume:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
@@ -31,7 +33,7 @@ jobs:
           source-directory: out
           destination-github-username: Bumbleboss
           destination-repository-name: bumbleboss.xyz
-          target-branch: pdf-copy
+          target-branch: master
           target-directory: public/files/
           user-name: 'Mohsen M.'
           user-email: me@bumbleboss.xyz
