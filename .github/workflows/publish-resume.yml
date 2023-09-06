@@ -14,7 +14,6 @@ jobs:
             "Mohsen M. — Mechatronics Engineer Resume.tex"
             "Mohsen M. — Product Designer Resume.tex"
           latexmk_use_lualatex: true
-          texlive_version: 2022
           latexmk_shell_escape: true
           extra_fonts: |
             ./assets/fonts/*.tff
@@ -23,4 +22,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: PDF
-          path: main.pdf
+          path: |
+            "Mohsen M. — Front-end Engineer Resume.pdf"
+            "Mohsen M. — Mechatronics Engineer Resume.pdf"
+            "Mohsen M. — Product Designer Resume.pdf"
