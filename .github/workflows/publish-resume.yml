@@ -1,7 +1,8 @@
 name: Publish resume
-on: [push]
-  branches:
-    - 'master'
+on:
+  push:
+    branches:
+      - 'master'
 jobs:
   publish_latex_resume:
     runs-on: ubuntu-latest
