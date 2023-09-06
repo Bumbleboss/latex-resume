@@ -9,7 +9,10 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: test.tex
+          root_file: |
+            "Mohsen M. — Front-end Engineer Resume.tex"
+            "Mohsen M. — Mechatronics Engineer Resume.tex"
+            "Mohsen M. — Product Designer Resume.tex"
           latexmk_use_lualatex: true
           latexmk_shell_escape: true
           extra_fonts: |
@@ -19,4 +22,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: PDF
-          path: test.pdf
+          path: /*.pdf
