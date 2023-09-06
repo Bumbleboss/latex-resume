@@ -16,10 +16,12 @@ jobs:
             product_designer_resume.tex
           latexmk_use_lualatex: true
           latexmk_shell_escape: true
-          args: '-outdir=out -pdf -c'
           extra_fonts: |
             ./assets/fonts/*.tff
             ./assets/fonts/*.otf
+
+      - name: Copy PDFs to out directory
+        run: mkdir out && cp *.pdf out
 
       - name: Publish resumes to portfolio
         uses: cpina/github-action-push-to-another-repository@main
