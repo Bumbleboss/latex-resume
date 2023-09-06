@@ -1,82 +1,6 @@
 \documentclass[9pt]{extarticle}
 
-% set document borders
-\usepackage[
-  a4paper,
-  top=20mm,
-  left=18mm,
-  right=18mm,
-  bottom=20mm
-]{geometry}
-
-\usepackage[protrusion=true, expansion=true]{microtype}
-\usepackage{paracol}
-
-\usepackage{hyperref} % use urls
-\usepackage{xcolor} % use colors
-\usepackage{graphbox} % use graphics
-
-% adds background watermark
-\usepackage{draftwatermark}
-\SetWatermarkText{\includegraphics{assets/watermark.eps}}
-\SetWatermarkAngle{0}
-
-\usepackage{ragged2e}
-
-% set text lineheight
-\usepackage{setspace}
-\onehalfspacing
-
-% set fonts
-\usepackage{fontspec}
-\setmainfont{Manrope}[
-  Path = assets/fonts/,
-  Extension = .ttf,
-  UprightFont = *-Regular,
-  ItalicFont = *-Italic,
-  BoldFont = *-Bold,
-  BoldItalicFont = *-BoldItalic
-]
-\newfontfamily{\optifont}{OPTIEinstein}[
-  Path = assets/fonts/,
-  Extension = .otf,
-  UprightFont = *-Black,
-  BoldFont = *-Black
-]
-
-% set variables
-\newcommand{\domain}{bumbleboss.xyz}
-\newcommand{\email}{me@bumbleboss.xyz}
-
-\newcommand{\accentColor}{\color[HTML]{7C6A60}}
-\newcommand{\blackColor}{\color[HTML]{1D1B1A}}
-\newcommand{\grayColor}{\color[HTML]{7A7C7F}}
-\newcommand{\textColor}{\color[HTML]{3A3636}}
-
-% set foot content
-\usepackage{scrlayer-scrpage}
-\ofoot{
-  \small{\normalfont \href{https://github.com/Bumbleboss/latex-resume}{Last update: \textbf{\today}}}
-}
-
-% set typography
-\usepackage{titlesec}
-\titleformat*{\section}{\fontsize{20pt}{20pt}\optifont\accentColor}
-\titleformat*{\subsection}{\fontsize{12pt}{12pt}\bfseries\blackColor}
-\titleformat*{\subsubsection}{\fontsize{8pt}{8pt}\bfseries\grayColor}
-\textColor
-
-% set list style
-\usepackage{tasks}
-\settasks{
-  label = \symbol{8226},
-  label-offset = 0em,
-  item-indent = 1.5em,
-  after-item-skip = 0.5ex
-}
-
-% disable page numbering and set default text color
-\pagenumbering{gobble}
+\input{content/preamble}
 
 % set pdf metadata
 \hypersetup{
@@ -85,6 +9,8 @@
 }
 
 \begin{document}
+  \input{content/heading}
+
   \setcolumnwidth{0.65\textwidth,0.35\textwidth}
   \setlength{\columnsep}{3em}
   
