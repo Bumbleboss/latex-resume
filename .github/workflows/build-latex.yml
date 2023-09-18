@@ -1,0 +1,25 @@
+name: Test documents
+on:
+  push:
+    branches:
+      - '*'
+      - '!master'
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v3
+
+      - name: Compile LaTeX documents
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: |
+            front-end_engineer_resume.tex
+            mechatronics_engineer_resume.tex
+            product_designer_resume.tex
+          latexmk_use_lualatex: true
+          latexmk_shell_escape: true
+          extra_fonts: |
+            ./assets/fonts/*.tff
+            ./assets/fonts/*.otf

@@ -1,11 +1,35 @@
 ## About
-The entire list of my resumes made in LaTeX! They are separated by specialization, each with their own layout for good content flow. The plan is to automatically generate a PDF file from a layout template when specific data changes.
+The entire list of my resumes made in LaTeX! They are separated by specialization, each with their own layout for good content flow.
+
+You can view the generated documents on my [portfolio](https://bumbleboss.xyz/about/).
 
 ## Structure
-The current structure separates each specialization to their individual folders. They are all similar in look but with changes tailored to personal requirements.
+Each resume is considered a layout, and each layout has their sections in a separate file. The sections are contained inside a directory based on specialization.
+
+For common content (e.g. LaTeX premable), they are simply put inside the content directory. Any assets like images, icons, and fonts are within the assets directory.
+
+Structure:
+```
+├── assets
+│   ├── fonts
+│   │   ├── comic-sans.ttf
+│   │   └── ...
+│   └── meow.png
+├── content
+│   ├── specialztion-1
+│   │   ├── section-1.tex
+│   │   ├── section-2.tex
+│   │   └── ...
+│   ├── specialztion-2
+│   │   └── ...
+│   └── preamble.tex
+├── layout-1.tex
+├── layout-2.tex
+└── ...
+```
 
 ## Build
-LuaLaTeX is being used for the build to have custom fonts and microtypes.
+To locally build this, you will need to use LuaLaTeX as the document uses fontspec and microtype packages.
 
 ## Feedback
-Feel free to add or detail a usecase in the repo.
+Any improvements is much appreciated!
