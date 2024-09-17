@@ -51,17 +51,19 @@
 \newcommand{\grayColor}{\color[HTML]{7A7C7F}}
 \newcommand{\textColor}{\color[HTML]{3A3636}}
 
-% set foot content
-\usepackage{scrlayer-scrpage}
-\ofoot{
-  \small{\normalfont \href{https://github.com/Bumbleboss/latex-resume}{Last update: \textbf{\today}}}
-}
-
 % set typography
 \usepackage{titlesec}
+
 \titleformat*{\section}{\fontsize{20pt}{20pt}\optifont\accentColor}
+\titlespacing*{\section}{0pt}{3ex}{0.5ex}
+
 \titleformat*{\subsection}{\fontsize{12pt}{12pt}\bfseries\blackColor}
-\titleformat*{\subsubsection}{\fontsize{8pt}{8pt}\bfseries\grayColor}
+\titlespacing*{\subsection}{0pt}{3ex}{0.5ex}
+
+% date format
+\newcommand{\dateformat}{\fontsize{8pt}{8pt}\bfseries\grayColor}
+
+% set color for normal text
 \textColor
 
 % set list style
@@ -70,7 +72,7 @@
   label = \symbol{8226},
   label-offset = 0em,
   item-indent = 1.5em,
-  after-item-skip = 0.5ex
+  after-item-skip = -0.5ex
 }
 
 % disable page numbering and set default text color
