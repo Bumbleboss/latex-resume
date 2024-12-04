@@ -67,12 +67,14 @@
 \textColor
 
 % set list style
-\usepackage{tasks}
-\settasks{
-  label = \symbol{8226},
-  label-offset = 0em,
-  item-indent = 1.5em,
-  after-item-skip = -0.5ex
+\usepackage{enumitem}
+
+\setlist[itemize]{%
+  label=\textbullet,
+  labelsep=0.5em,
+  left=0.4em,
+  itemsep=0.3ex,
+  parsep=0pt,
 }
 
 % disable page numbering and set default text color
