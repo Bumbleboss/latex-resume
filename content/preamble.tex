@@ -43,9 +43,6 @@
 ]
 
 % set variables
-\newcommand{\domain}{bumbleboss.xyz}
-\newcommand{\email}{me@bumbleboss.xyz}
-
 \newcommand{\accentColor}{\color[HTML]{7C6A60}}
 \newcommand{\blackColor}{\color[HTML]{1D1B1A}}
 \newcommand{\grayColor}{\color[HTML]{7A7C7F}}
@@ -55,13 +52,17 @@
 \usepackage{titlesec}
 
 \titleformat*{\section}{\fontsize{20pt}{20pt}\optifont\accentColor}
-\titlespacing*{\section}{0pt}{3ex}{0.5ex}
+\titlespacing*{\section}{0pt}{2.5ex}{0.5ex}
 
 \titleformat*{\subsection}{\fontsize{12pt}{12pt}\bfseries\blackColor}
-\titlespacing*{\subsection}{0pt}{3ex}{0.5ex}
+\titlespacing*{\subsection}{0pt}{2ex}{0.2ex}
 
-% date format
-\newcommand{\dateformat}{\fontsize{8pt}{8pt}\bfseries\grayColor}
+\titleformat*{\subsubsection}{\fontsize{11pt}{11pt}\bfseries\grayColor}
+\titlespacing*{\subsubsection}{0pt}{0ex}{0.6ex}
+
+% formats
+\newcommand{\smallFormat}{\fontsize{9pt}{9pt}\bfseries\grayColor}
+\newcommand{\urlFormat}[1]{\fontsize{9pt}{9pt}\bfseries\grayColor\underline{#1}}
 
 % set color for normal text
 \textColor
