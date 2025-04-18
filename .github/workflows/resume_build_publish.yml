@@ -1,4 +1,4 @@
-name: Publish resume
+name: Resume Build Publish
 on:
   push:
     branches:
@@ -14,9 +14,9 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: |
-            front-end_engineer_resume.tex
-            mechatronics_engineer_resume.tex
-            product_designer_resume.tex
+            engineer_mechatronics.tex
+            engineer_ui_design.tex
+            engineer_ui_frontend.tex
           latexmk_use_lualatex: true
           latexmk_shell_escape: true
           extra_fonts: |
