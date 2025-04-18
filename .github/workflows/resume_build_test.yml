@@ -1,4 +1,4 @@
-name: Test documents
+name: Resume Build Test
 on:
   push:
     branches:
